@@ -4,16 +4,8 @@
     src/android_logging/liblog/logger_write.cpp
     src/android_logging/liblog/properties.cpp
     src/android_logging/liblog/logprint.cpp)
-target_compile_definitions(android_liblog PRIVATE
-    -DLIBLOG_LOG_TAG=1006 -D_XOPEN_SOURCE=700 -DFAKE_LOG_DEVICE=1)
-target_include_directories(android_liblog PUBLIC
-    src/android_core/include
-    src/android_logging/liblog/include
-    src/android_core/libcutils/include
-    src/android_libbase/include)
 
-add_library(android_libbase STATIC
-    src/android_libbase/abi_compatibility.cpp
+
     src/android_libbase/chrono_utils.cpp
     src/android_libbase/file.cpp
     src/android_libbase/hex.cpp
